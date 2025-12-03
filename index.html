@@ -374,7 +374,7 @@
         </button>
     </div>
 
-    <!-- JavaScript 核心功能（已修复二维码生成） -->
+    <!-- JavaScript 核心功能（已修复二维码链接，扫码跳转子网页） -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // 1. 移动端菜单切换
@@ -384,11 +384,11 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // 2. 生成二维码（稳定版：英文文件名+try-catch容错）
+            // 2. 生成二维码（已修复链接：用window.location.href，确保地址正确）
             // 法制码 → 指向 legal-info.html
             try {
                 new QRCode(document.getElementById('legal-qrcode'), {
-                    text: window.location.origin + '/legal-info.html',
+                    text: window.location.href + 'legal-info.html',
                     width: 220,
                     height: 220,
                     colorDark: '#165DFF',
@@ -400,10 +400,10 @@
                 console.error('法制码生成失败：', error);
             }
 
-            // 廉洁码 → 指向 integrity-info.html（已改为英文文件名，避免解析失败）
+            // 廉洁码 → 指向 integrity-info.html
             try {
                 new QRCode(document.getElementById('integrity-qrcode'), {
-                    text: window.location.origin + '/integrity-info.html',
+                    text: window.location.href + 'integrity-info.html',
                     width: 220,
                     height: 220,
                     colorDark: '#36D399',
@@ -418,7 +418,7 @@
             // 服务码 → 指向 service-web.html
             try {
                 new QRCode(document.getElementById('service-qrcode'), {
-                    text: window.location.origin + '/service-web.html',
+                    text: window.location.href + 'service-web.html',
                     width: 220,
                     height: 220,
                     colorDark: '#FF7D00',
