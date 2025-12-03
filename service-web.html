@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便民服务 - 三码服务平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .img-container {
+            overflow-x: auto;
+        }
+
+        .tab-active {
+            border-bottom: 2px solid #FF7D00;
+            color: #FF7D00;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 text-service">
+                <i class="fa fa-arrow-left text-xl"></i>
+                <span class="font-bold">返回首页</span>
+            </a>
+            <h1 class="text-xl font-bold text-service">便民服务网页</h1>
+            <div class="w-8"></div>
+        </div>
+    </header>
+
+    <!-- 选项卡导航 -->
+    <nav class="bg-white border-b border-gray-200 sticky top-14 z-40">
+        <div class="container mx-auto px-4 flex overflow-x-auto">
+            <button class="tab-btn tab-active px-4 py-3 whitespace-nowrap focus:outline-none" data-tab="guide">
+                办事指南
+            </button>
+            <button class="tab-btn px-4 py-3 whitespace-nowrap focus:outline-none text-gray-600" data-tab="flow">
+                流程长图
+            </button>
+            <button class="tab-btn px-4 py-3 whitespace-nowrap focus:outline-none text-gray-600" data-tab="download">
+                资料下载
+            </button>
+            <button class="tab-btn px-4 py-3 whitespace-nowrap focus:outline-none text-gray-600" data-tab="faq">
+                常见问题
+            </button>
+        </div>
+    </nav>
+
+    <!-- 选项卡内容 -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- 办事指南 -->
+        <div class="tab-content" id="guide">
+            <div class="bg-white rounded-xl p-6 shadow mb-6">
+                <h2 class="text-2xl font-bold text-service mb-4">个人业务办理指南</h2>
+                <div class="space-y-4 text-gray-700">
+                    <p>欢迎使用便民服务平台！以下是个人业务的详细办理流程，您可根据需求选择线上或线下办理方式：</p>
+
+                    <h3 class="text-xl font-semibold mt-6">一、线上办理流程</h3>
+                    <ol class="list-decimal list-inside space-y-2 pl-4">
+                        <li>登录官方网站或APP，完成实名认证（需身份证正反面照片）</li>
+                        <li>进入"个人业务"板块，选择对应办理事项</li>
+                        <li>填写申请信息，上传所需证明材料（支持JPG/PNG/PDF）</li>
+                        <li>提交申请后，等待审核（一般1-3个工作日）</li>
+                        <li>审核通过后，在线获取电子凭证或快递送达纸质文件</li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold mt-6">二、线下办理流程</h3>
+                    <ol class="list-decimal list-inside space-y-2 pl-4">
+                        <li>准备好身份证原件及复印件、相关证明材料（原件+复印件）</li>
+                        <li>前往就近服务大厅（地址见下方）</li>
+                        <li>取号排队，向工作人员提交材料</li>
+                        <li>工作人员审核无误后，现场办理并发放凭证</li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold mt-6">三、服务大厅地址</h3>
+                    <p>• 主厅：北京市朝阳区XX街道XX大厦1层</p>
+                    <p>• 分厅1：北京市海淀区XX路XX号</p>
+                    <p>• 分厅2：北京市西城区XX街XX号</p>
+                    <p class="text-gray-500 mt-2">工作时间：周一至周五 9:00-17:00（法定节假日除外）</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 流程长图 -->
+        <div class="tab-content hidden" id="flow">
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h2 class="text-2xl font-bold text-service mb-4 flex items-center">
+                    <i class="fa fa-file-image-o mr-2"></i> 业务办理流程长图
+                </h2>
+                <div class="img-container">
+                    <!-- 替换为你的服务流程长图（建议尺寸：1600×900px，支持横向滚动） -->
+                    <img src="https://picsum.photos/id/1079/1600/900" alt="业务办理流程" class="max-h-[700px] rounded-lg">
+                </div>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <a href="流程长图.jpg" download
+                        class="bg-service/10 text-service px-4 py-2 rounded-lg hover:bg-service/20 transition-colors">
+                        <i class="fa fa-download mr-1"></i> 下载原图
+                    </a>
+                    <a href="流程长图.pdf" download
+                        class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                        <i class="fa fa-file-pdf-o mr-1"></i> 下载PDF版
+                    </a>
+                </div>
+                <p class="text-gray-500 text-center mt-3 text-sm">
+                    提示：左右滑动查看完整流程 | 点击下载可保存高清版本
+                </p>
+            </div>
+        </div>
+
+        <!-- 资料下载 -->
+        <div class="tab-content hidden" id="download">
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h2 class="text-2xl font-bold text-service mb-4 flex items-center">
+                    <i class="fa fa-download mr-2"></i> 常用资料下载
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="个人申请表.docx" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-word-o text-service text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">个人业务申请表.docx</h3>
+                            <p class="text-gray-500 text-sm">文件大小：2.3MB | 格式：Word</p>
+                        </div>
+                    </a>
+                    <a href="单位申请表.docx" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-word-o text-service text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">单位业务申请表.docx</h3>
+                            <p class="text-gray-500 text-sm">文件大小：2.5MB | 格式：Word</p>
+                        </div>
+                    </a>
+                    <a href="证明材料清单.pdf" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-pdf-o text-red-500 text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">证明材料清单.pdf</h3>
+                            <p class="text-gray-500 text-sm">文件大小：1.8MB | 格式：PDF</p>
+                        </div>
+                    </a>
+                    <a href="办事指南手册.pdf" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-pdf-o text-red-500 text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">办事指南手册.pdf</h3>
+                            <p class="text-gray-500 text-sm">文件大小：5.7MB | 格式：PDF</p>
+                        </div>
+                    </a>
+                    <a href="常见问题汇总.xlsx" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-excel-o text-green-500 text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">常见问题汇总.xlsx</h3>
+                            <p class="text-gray-500 text-sm">文件大小：1.2MB | 格式：Excel</p>
+                        </div>
+                    </a>
+                    <a href="电子凭证使用说明.docx" download
+                        class="border border-gray-200 rounded-lg p-4 hover:border-service hover:bg-service/5 transition-colors flex items-center">
+                        <i class="fa fa-file-word-o text-service text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">电子凭证使用说明.docx</h3>
+                            <p class="text-gray-500 text-sm">文件大小：1.5MB | 格式：Word</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="tab-content hidden" id="faq">
+            <div class="bg-white rounded-xl p-6 shadow">
+                <h2 class="text-2xl font-bold text-service mb-4 flex items-center">
+                    <i class="fa fa-question-circle mr-2"></i> 常见问题解答
+                </h2>
+                <div class="space-y-4">
+                    <div class="border-b border-gray-100 pb-4">
+                        <h3 class="font-semibold text-lg">Q1：线上申请后，多久能审核通过？</h3>
+                        <p class="text-gray-600 mt-1">A：一般情况下，审核时间为1-3个工作日。若材料齐全且符合要求，最快可当天审核通过；若材料不完整，工作人员会通过短信通知补充材料。
+                        </p>
+                    </div>
+                    <div class="border-b border-gray-100 pb-4">
+                        <h3 class="font-semibold text-lg">Q2：电子凭证和纸质凭证有区别吗？</h3>
+                        <p class="text-gray-600 mt-1">A：没有区别。电子凭证与纸质凭证具有同等法律效力，可用于各类场景的验证使用，支持线上查验真伪。</p>
+                    </div>
+                    <div class="border-b border-gray-100 pb-4">
+                        <h3 class="font-semibold text-lg">Q3：可以委托他人代办业务吗？</h3>
+                        <p class="text-gray-600 mt-1">A：可以。委托他人代办需提供：代办人身份证原件及复印件、申请人身份证原件及复印件、委托书（可在"资料下载"板块下载模板）。</p>
+                    </div>
+                    <div class="border-b border-gray-100 pb-4">
+                        <h3 class="font-semibold text-lg">Q4：业务办理需要收费吗？</h3>
+                        <p class="text-gray-600 mt-1">A：基础业务办理免费，仅收取纸质文件快递费（默认顺丰到付）；特殊业务收费标准会在申请页面明确公示，无隐形收费。</p>
+                    </div>
+                    <div class="pb-4">
+                        <h3 class="font-semibold text-lg">Q5：如何查询业务办理进度？</h3>
+                        <p class="text-gray-600 mt-1">A：可通过以下方式查询：① 登录官方网站/APP，在"我的订单"中查看；②
+                            拨打咨询电话010-12345678，提供身份证号查询；③ 关注官方微信公众号，在"进度查询"板块查询。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white mt-8 py-4 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>© 2024 三码服务平台 版权所有 | 咨询电话：010-12345678 | 投诉邮箱：tousu@example.com</p>
+        </div>
+    </footer>
+
+    <!-- 选项卡切换JS -->
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // 切换选项卡激活状态
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('tab-active');
+                    b.classList.add('text-gray-600');
+                });
+                this.classList.add('tab-active');
+                this.classList.remove('text-gray-600');
+
+                // 切换内容显示
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
